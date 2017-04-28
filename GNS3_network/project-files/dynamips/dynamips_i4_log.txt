@@ -1,0 +1,64 @@
+Apr 01 21:36:28.038 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Apr 01 21:36:28.038 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50997.
+Apr 01 21:36:28.101 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 01 21:36:28.121 HYPERVISOR: exec_cmd: hypervisor working_dir /home/user/Desktop/projectANAWS/project_network/project-files/dynamips 
+Apr 01 21:36:28.122 GENERAL: working_dir=/home/user/Desktop/projectANAWS/project_network/project-files/dynamips
+Apr 01 21:36:28.143 HYPERVISOR: exec_cmd: vm create R4 4 c3600 
+Apr 01 21:36:28.144 VM: VM R4 created.
+Apr 01 21:36:28.165 HYPERVISOR: exec_cmd: vm set_con_tcp_port R4 5003 
+Apr 01 21:36:28.180 HYPERVISOR: exec_cmd: c3600 get_mac_addr R4 
+Apr 01 21:36:28.195 HYPERVISOR: exec_cmd: c3600 set_mac_addr R4 cc04.17b5.0000 
+Apr 01 21:36:28.213 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:36:28.236 HYPERVISOR: exec_cmd: vm set_idle_pc R4 0x605b90e0 
+Apr 01 21:36:28.265 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:36:28.285 HYPERVISOR: exec_cmd: vm slot_add_binding R4 3 0 NM-1FE-TX 
+Apr 01 21:36:28.314 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:36:28.350 HYPERVISOR: exec_cmd: vm slot_add_binding R4 1 0 NM-4T 
+Apr 01 21:36:28.372 HYPERVISOR: exec_cmd: vm set_ios R4 /home/user/GNS3/images/IOS/c3640-a3js-mz.124-23.image 
+Apr 01 21:36:28.386 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:36:28.403 HYPERVISOR: exec_cmd: vm slot_add_binding R4 2 0 NM-1FE-TX 
+Apr 01 21:36:28.416 HYPERVISOR: exec_cmd: vm set_nvram R4 256 
+Apr 01 21:36:28.427 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:36:28.439 HYPERVISOR: exec_cmd: vm slot_add_binding R4 0 0 NM-1FE-TX 
+Apr 01 21:36:28.473 HYPERVISOR: exec_cmd: vm set_config R4 configs/i4_startup-config.cfg 
+Apr 01 21:36:43.154 HYPERVISOR: exec_cmd: nio create_udp udp-8331a6b9-9429-4454-b63a-c7db1bdf74eb 10003 127.0.0.1 10002 
+Apr 01 21:36:43.191 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 2 0 udp-8331a6b9-9429-4454-b63a-c7db1bdf74eb 
+Apr 01 21:36:43.307 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:36:44.637 HYPERVISOR: exec_cmd: nio create_udp udp-8d668d47-b26d-4ab5-9112-b61fc829c14c 10011 127.0.0.1 10010 
+Apr 01 21:36:44.687 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 0 0 udp-8d668d47-b26d-4ab5-9112-b61fc829c14c 
+Apr 01 21:36:44.696 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:36:44.951 HYPERVISOR: exec_cmd: nio create_udp udp-386de947-429b-43b5-a89b-895b24361c36 10014 127.0.0.1 10015 
+Apr 01 21:36:45.031 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 3 0 udp-386de947-429b-43b5-a89b-895b24361c36 
+Apr 01 21:36:45.083 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:36:45.679 HYPERVISOR: exec_cmd: nio create_udp udp-881c3959-cf5a-4842-ab5f-1628f734b8e2 10028 127.0.0.1 10029 
+Apr 01 21:36:45.724 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 1 0 udp-881c3959-cf5a-4842-ab5f-1628f734b8e2 
+Apr 01 21:36:45.747 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:36:51.823 HYPERVISOR: exec_cmd: vm create Ghost 0 c3600 
+Apr 01 21:36:51.823 VM: VM Ghost created.
+Apr 01 21:36:51.826 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/user/GNS3/images/IOS/c3640-a3js-mz.124-23.image 
+Apr 01 21:36:51.832 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Apr 01 21:36:51.835 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c3640-a3js-mz.124-23.image-128.ghost 
+Apr 01 21:36:51.837 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Apr 01 21:36:51.841 HYPERVISOR: exec_cmd: vm start Ghost 
+Apr 01 21:37:17.136 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Apr 01 21:37:17.140 HYPERVISOR: exec_cmd: vm stop Ghost 
+Apr 01 21:37:17.299 VM: VM Ghost shutdown.
+Apr 01 21:37:17.309 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Apr 01 21:37:17.310 VM: VM Ghost destroyed.
+Apr 01 21:37:17.318 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Apr 01 21:37:17.320 HYPERVISOR: exec_cmd: vm set_ghost_file R4 c3640-a3js-mz.124-23.image-128.ghost 
+Apr 01 21:37:17.323 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 21:37:17.325 HYPERVISOR: exec_cmd: vm start R4 
+Apr 01 22:24:15.588 HYPERVISOR: exec_cmd: nio bind_filter udp-8d668d47-b26d-4ab5-9112-b61fc829c14c 2 capture 
+Apr 01 22:24:15.591 HYPERVISOR: exec_cmd: nio setup_filter udp-8d668d47-b26d-4ab5-9112-b61fc829c14c 2 en10mb /home/user/Desktop/projectANAWS/project_network/project-files/captures/R4_FastEthernet0-0_to_R1_FastEthernet2-0.pcap 
+Apr 01 22:28:24.569 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 22:28:24.644 HYPERVISOR: exec_cmd: vm stop R4 
+Apr 01 22:28:24.828 VM: VM R4 shutdown.
+Apr 01 22:28:24.846 HYPERVISOR: exec_cmd: vm extract_config R4 
+Apr 01 22:28:36.402 HYPERVISOR: exec_cmd: vm get_status R4 
+Apr 01 22:28:36.490 HYPERVISOR: exec_cmd: vm extract_config R4 
+Apr 01 22:28:36.698 HYPERVISOR: exec_cmd: vm delete R4 
+Apr 01 22:28:36.698 VM: VM R4 destroyed.
+Apr 01 22:28:36.770 HYPERVISOR: exec_cmd: hypervisor stop 
+Apr 01 22:28:37.152 HYPERVISOR: Stopped.
+Apr 01 22:28:37.152 GENERAL: reset done.

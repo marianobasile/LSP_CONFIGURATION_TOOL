@@ -1,0 +1,51 @@
+Mar 26 11:45:59.906 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Mar 26 11:45:59.906 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 48342.
+Mar 26 11:45:59.973 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 26 11:45:59.976 HYPERVISOR: exec_cmd: hypervisor working_dir /media/user/06330BE5605DC934/mpls_te_network/project-files/dynamips 
+Mar 26 11:45:59.977 GENERAL: working_dir=/media/user/06330BE5605DC934/mpls_te_network/project-files/dynamips
+Mar 26 11:45:59.979 HYPERVISOR: exec_cmd: vm create R9 9 c3600 
+Mar 26 11:45:59.989 VM: VM R9 created.
+Mar 26 11:45:59.993 HYPERVISOR: exec_cmd: vm set_con_tcp_port R9 5008 
+Mar 26 11:45:59.997 HYPERVISOR: exec_cmd: c3600 get_mac_addr R9 
+Mar 26 11:46:00.015 HYPERVISOR: exec_cmd: vm set_nvram R9 256 
+Mar 26 11:46:00.019 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:46:00.049 HYPERVISOR: exec_cmd: vm slot_add_binding R9 3 0 NM-1FE-TX 
+Mar 26 11:46:00.053 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:46:00.073 HYPERVISOR: exec_cmd: vm slot_add_binding R9 0 0 NM-4T 
+Mar 26 11:46:00.096 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:46:00.101 HYPERVISOR: exec_cmd: vm slot_add_binding R9 1 0 NM-1FE-TX 
+Mar 26 11:46:00.108 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:46:00.116 HYPERVISOR: exec_cmd: vm slot_add_binding R9 2 0 NM-1FE-TX 
+Mar 26 11:46:00.132 HYPERVISOR: exec_cmd: vm set_ios R9 /home/user/GNS3/images/IOS/c3640-a3js-mz.124-23.image 
+Mar 26 11:46:00.308 HYPERVISOR: exec_cmd: c3600 set_mac_addr R9 cc09.182a.0000 
+Mar 26 11:46:00.333 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:46:00.349 HYPERVISOR: exec_cmd: vm set_idle_pc R9 0x605b90e0 
+Mar 26 11:46:00.412 HYPERVISOR: exec_cmd: vm set_config R9 configs/i9_startup-config.cfg 
+Mar 26 11:46:04.184 HYPERVISOR: exec_cmd: nio create_udp udp-9b398a10-9bf4-4b49-ac6d-a6a1a8b0fd86 10025 127.0.0.1 10024 
+Mar 26 11:46:04.197 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 3 0 udp-9b398a10-9bf4-4b49-ac6d-a6a1a8b0fd86 
+Mar 26 11:46:04.208 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:46:04.255 HYPERVISOR: exec_cmd: nio create_udp udp-97117764-c4c2-45d1-a279-683ba832b88a 10027 127.0.0.1 10026 
+Mar 26 11:46:04.318 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 2 0 udp-97117764-c4c2-45d1-a279-683ba832b88a 
+Mar 26 11:46:04.328 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:46:04.388 HYPERVISOR: exec_cmd: nio create_udp udp-acc66c20-b0b2-4e8d-ac91-e1e1ed9fe926 10029 127.0.0.1 10028 
+Mar 26 11:46:04.425 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 0 0 udp-acc66c20-b0b2-4e8d-ac91-e1e1ed9fe926 
+Mar 26 11:46:04.450 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:46:04.698 HYPERVISOR: exec_cmd: nio create_udp udp-e8a4c39a-1c08-4668-9750-366523ef4775 10039 127.0.0.1 10038 
+Mar 26 11:46:04.732 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 1 0 udp-e8a4c39a-1c08-4668-9750-366523ef4775 
+Mar 26 11:46:04.747 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:46:10.807 HYPERVISOR: exec_cmd: vm create Ghost 0 c3600 
+Mar 26 11:46:10.810 VM: VM Ghost created.
+Mar 26 11:46:10.831 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/user/GNS3/images/IOS/c3640-a3js-mz.124-23.image 
+Mar 26 11:46:10.846 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Mar 26 11:46:10.911 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c3640-a3js-mz.124-23.image-128.ghost 
+Mar 26 11:46:10.950 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 26 11:46:22.201 HYPERVISOR: exec_cmd: vm start Ghost 
+Mar 26 11:46:37.776 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 26 11:46:37.782 HYPERVISOR: exec_cmd: vm stop Ghost 
+Mar 26 11:47:53.328 VM: VM Ghost shutdown.
+Mar 26 11:47:53.398 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Mar 26 11:47:53.399 VM: VM Ghost destroyed.
+Mar 26 11:47:53.425 HYPERVISOR: exec_cmd: vm set_ghost_status R9 2 
+Mar 26 11:47:53.433 HYPERVISOR: exec_cmd: vm set_ghost_file R9 c3640-a3js-mz.124-23.image-128.ghost 
+Mar 26 11:47:53.438 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 26 11:47:53.442 HYPERVISOR: exec_cmd: vm start R9 

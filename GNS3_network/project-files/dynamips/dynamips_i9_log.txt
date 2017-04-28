@@ -1,0 +1,52 @@
+Apr 01 21:36:30.050 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Apr 01 21:36:30.051 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 55198.
+Apr 01 21:36:30.694 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 01 21:36:30.739 HYPERVISOR: exec_cmd: hypervisor working_dir /home/user/Desktop/projectANAWS/project_network/project-files/dynamips 
+Apr 01 21:36:30.739 GENERAL: working_dir=/home/user/Desktop/projectANAWS/project_network/project-files/dynamips
+Apr 01 21:36:30.772 HYPERVISOR: exec_cmd: vm create R9 9 c3600 
+Apr 01 21:36:30.773 VM: VM R9 created.
+Apr 01 21:36:30.782 HYPERVISOR: exec_cmd: vm set_con_tcp_port R9 5008 
+Apr 01 21:36:30.799 HYPERVISOR: exec_cmd: c3600 get_mac_addr R9 
+Apr 01 21:36:30.815 HYPERVISOR: exec_cmd: c3600 set_mac_addr R9 cc09.182a.0000 
+Apr 01 21:36:30.828 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:36:30.841 HYPERVISOR: exec_cmd: vm set_idle_pc R9 0x605b90e0 
+Apr 01 21:36:30.849 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:36:30.856 HYPERVISOR: exec_cmd: vm slot_add_binding R9 3 0 NM-1FE-TX 
+Apr 01 21:36:30.868 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:36:30.873 HYPERVISOR: exec_cmd: vm slot_add_binding R9 1 0 NM-1FE-TX 
+Apr 01 21:36:30.880 HYPERVISOR: exec_cmd: vm set_ios R9 /home/user/GNS3/images/IOS/c3640-a3js-mz.124-23.image 
+Apr 01 21:36:30.892 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:36:30.917 HYPERVISOR: exec_cmd: vm slot_add_binding R9 2 0 NM-1FE-TX 
+Apr 01 21:36:30.957 HYPERVISOR: exec_cmd: vm set_nvram R9 256 
+Apr 01 21:36:31.020 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:36:31.084 HYPERVISOR: exec_cmd: vm slot_add_binding R9 0 0 NM-4T 
+Apr 01 21:36:31.098 HYPERVISOR: exec_cmd: vm set_config R9 configs/i9_startup-config.cfg 
+Apr 01 21:36:45.509 HYPERVISOR: exec_cmd: nio create_udp udp-77da589b-c7a6-4ad1-9cad-f385f4fd3b05 10025 127.0.0.1 10024 
+Apr 01 21:36:45.536 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 3 0 udp-77da589b-c7a6-4ad1-9cad-f385f4fd3b05 
+Apr 01 21:36:45.543 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:36:45.635 HYPERVISOR: exec_cmd: nio create_udp udp-d811da3b-f879-4ddb-941b-cbd8afa95dee 10027 127.0.0.1 10026 
+Apr 01 21:36:45.692 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 2 0 udp-d811da3b-f879-4ddb-941b-cbd8afa95dee 
+Apr 01 21:36:45.731 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:36:45.897 HYPERVISOR: exec_cmd: nio create_udp udp-2c065a9b-725d-4088-8518-1f7639803761 10029 127.0.0.1 10028 
+Apr 01 21:36:46.048 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 0 0 udp-2c065a9b-725d-4088-8518-1f7639803761 
+Apr 01 21:36:46.106 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:36:46.198 HYPERVISOR: exec_cmd: nio create_udp udp-14b79589-d3f6-4ef9-8e72-7ff2f6e9622a 10035 127.0.0.1 10034 
+Apr 01 21:36:46.252 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 1 0 udp-14b79589-d3f6-4ef9-8e72-7ff2f6e9622a 
+Apr 01 21:36:46.278 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:40:18.869 HYPERVISOR: exec_cmd: vm set_ghost_status R9 2 
+Apr 01 21:40:18.888 HYPERVISOR: exec_cmd: vm set_ghost_file R9 c3640-a3js-mz.124-23.image-128.ghost 
+Apr 01 21:40:19.152 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 21:40:19.206 HYPERVISOR: exec_cmd: vm start R9 
+Apr 01 22:21:24.803 HYPERVISOR: exec_cmd: nio bind_filter udp-2c065a9b-725d-4088-8518-1f7639803761 2 capture 
+Apr 01 22:21:24.806 HYPERVISOR: exec_cmd: nio setup_filter udp-2c065a9b-725d-4088-8518-1f7639803761 2 c_hdlc /home/user/Desktop/projectANAWS/project_network/project-files/captures/R9_Serial0-0_to_R4_Serial1-0.pcap 
+Apr 01 22:28:21.732 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 22:28:21.741 HYPERVISOR: exec_cmd: vm stop R9 
+Apr 01 22:28:21.968 VM: VM R9 shutdown.
+Apr 01 22:28:21.985 HYPERVISOR: exec_cmd: vm extract_config R9 
+Apr 01 22:28:36.430 HYPERVISOR: exec_cmd: vm get_status R9 
+Apr 01 22:28:36.496 HYPERVISOR: exec_cmd: vm extract_config R9 
+Apr 01 22:28:36.731 HYPERVISOR: exec_cmd: vm delete R9 
+Apr 01 22:28:36.732 VM: VM R9 destroyed.
+Apr 01 22:28:36.829 HYPERVISOR: exec_cmd: hypervisor stop 
+Apr 01 22:28:37.104 HYPERVISOR: Stopped.
+Apr 01 22:28:37.109 GENERAL: reset done.

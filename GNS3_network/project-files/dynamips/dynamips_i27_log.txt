@@ -1,0 +1,59 @@
+Mar 10 23:58:08.781 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Mar 10 23:58:08.781 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56516.
+Mar 10 23:58:08.850 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 10 23:58:08.854 HYPERVISOR: exec_cmd: hypervisor working_dir /media/user/4965959D09434F00/mpls_network/project-files/dynamips 
+Mar 10 23:58:08.862 GENERAL: working_dir=/media/user/4965959D09434F00/mpls_network/project-files/dynamips
+Mar 10 23:58:08.865 HYPERVISOR: exec_cmd: vm create R9 9 c3600 
+Mar 10 23:58:08.868 VM: VM R9 created.
+Mar 10 23:58:08.871 HYPERVISOR: exec_cmd: vm set_con_tcp_port R9 5008 
+Mar 10 23:58:08.873 HYPERVISOR: exec_cmd: c3600 get_mac_addr R9 
+Mar 10 23:58:08.876 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 10 23:58:08.880 HYPERVISOR: exec_cmd: vm slot_add_binding R9 1 0 NM-1FE-TX 
+Mar 10 23:58:08.883 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 10 23:58:08.886 HYPERVISOR: exec_cmd: vm slot_add_binding R9 3 0 NM-1FE-TX 
+Mar 10 23:58:08.889 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 10 23:58:08.892 HYPERVISOR: exec_cmd: vm set_idle_pc R9 0x605b90e0 
+Mar 10 23:58:08.896 HYPERVISOR: exec_cmd: vm set_ios R9 /home/user/GNS3/images/IOS/c3640-a3js-mz.124-23.image 
+Mar 10 23:58:08.904 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 10 23:58:08.926 HYPERVISOR: exec_cmd: vm slot_add_binding R9 2 0 NM-1FE-TX 
+Mar 10 23:58:08.950 HYPERVISOR: exec_cmd: vm set_nvram R9 256 
+Mar 10 23:58:09.008 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 10 23:58:09.045 HYPERVISOR: exec_cmd: vm slot_add_binding R9 0 0 NM-1FE-TX 
+Mar 10 23:58:09.051 HYPERVISOR: exec_cmd: c3600 set_mac_addr R9 cc09.182a.0000 
+Mar 10 23:58:09.055 HYPERVISOR: exec_cmd: vm set_config R9 configs/i9_startup-config.cfg 
+Mar 10 23:58:10.796 HYPERVISOR: exec_cmd: nio create_udp udp-f65cb045-8a6a-4d8a-a0c8-2401db131957 10026 127.0.0.1 10024 
+Mar 10 23:58:10.814 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 2 0 udp-f65cb045-8a6a-4d8a-a0c8-2401db131957 
+Mar 10 23:58:10.826 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 10 23:58:10.893 HYPERVISOR: exec_cmd: nio create_udp udp-4182237c-a748-4f0f-af09-594ec398c0e8 10027 127.0.0.1 10025 
+Mar 10 23:58:10.906 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 3 0 udp-4182237c-a748-4f0f-af09-594ec398c0e8 
+Mar 10 23:58:10.915 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 10 23:58:11.214 HYPERVISOR: exec_cmd: nio create_udp udp-e7dc8b9e-75e5-4ae8-8da1-911e13cc5824 10035 127.0.0.1 10034 
+Mar 10 23:58:11.224 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R9 1 0 udp-e7dc8b9e-75e5-4ae8-8da1-911e13cc5824 
+Mar 10 23:58:11.226 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 10 23:58:28.188 HYPERVISOR: exec_cmd: vm create Ghost 0 c3600 
+Mar 10 23:58:28.189 VM: VM Ghost created.
+Mar 10 23:58:28.199 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/user/GNS3/images/IOS/c3640-a3js-mz.124-23.image 
+Mar 10 23:58:28.200 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Mar 10 23:58:28.201 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c3640-a3js-mz.124-23.image-128.ghost 
+Mar 10 23:58:28.202 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 10 23:58:28.203 HYPERVISOR: exec_cmd: vm start Ghost 
+Mar 10 23:58:52.895 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 10 23:58:52.901 HYPERVISOR: exec_cmd: vm stop Ghost 
+Mar 11 00:00:00.339 VM: VM Ghost shutdown.
+Mar 11 00:00:00.342 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Mar 11 00:00:00.343 VM: VM Ghost destroyed.
+Mar 11 00:00:00.352 HYPERVISOR: exec_cmd: vm set_ghost_status R9 2 
+Mar 11 00:00:00.353 HYPERVISOR: exec_cmd: vm set_ghost_file R9 c3640-a3js-mz.124-23.image-128.ghost 
+Mar 11 00:00:00.355 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 11 00:00:00.358 HYPERVISOR: exec_cmd: vm start R9 
+Mar 11 00:01:52.239 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 11 00:01:52.249 HYPERVISOR: exec_cmd: vm stop R9 
+Mar 11 00:01:52.457 VM: VM R9 shutdown.
+Mar 11 00:01:52.459 HYPERVISOR: exec_cmd: vm extract_config R9 
+Mar 11 00:02:23.610 HYPERVISOR: exec_cmd: vm get_status R9 
+Mar 11 00:02:23.633 HYPERVISOR: exec_cmd: vm extract_config R9 
+Mar 11 00:02:23.658 HYPERVISOR: exec_cmd: vm delete R9 
+Mar 11 00:02:23.658 VM: VM R9 destroyed.
+Mar 11 00:02:23.673 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 11 00:02:24.090 HYPERVISOR: Stopped.
+Mar 11 00:02:24.091 GENERAL: reset done.

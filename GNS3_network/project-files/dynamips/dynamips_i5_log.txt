@@ -1,0 +1,47 @@
+Apr 01 21:36:28.038 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Apr 01 21:36:28.041 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52763.
+Apr 01 21:36:28.103 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 01 21:36:28.123 HYPERVISOR: exec_cmd: hypervisor working_dir /home/user/Desktop/projectANAWS/project_network/project-files/dynamips 
+Apr 01 21:36:28.123 GENERAL: working_dir=/home/user/Desktop/projectANAWS/project_network/project-files/dynamips
+Apr 01 21:36:28.146 HYPERVISOR: exec_cmd: vm create R5 5 c3600 
+Apr 01 21:36:28.155 VM: VM R5 created.
+Apr 01 21:36:28.170 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5004 
+Apr 01 21:36:28.184 HYPERVISOR: exec_cmd: c3600 get_mac_addr R5 
+Apr 01 21:36:28.200 HYPERVISOR: exec_cmd: c3600 set_mac_addr R5 cc05.17cb.0000 
+Apr 01 21:36:28.221 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 21:36:28.252 HYPERVISOR: exec_cmd: vm set_idle_pc R5 0x605b90e0 
+Apr 01 21:36:28.273 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 21:36:28.291 HYPERVISOR: exec_cmd: vm slot_add_binding R5 3 0 NM-1FE-TX 
+Apr 01 21:36:28.324 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 21:36:28.356 HYPERVISOR: exec_cmd: vm slot_add_binding R5 1 0 NM-1FE-TX 
+Apr 01 21:36:28.378 HYPERVISOR: exec_cmd: vm set_ios R5 /home/user/GNS3/images/IOS/c3640-a3js-mz.124-23.image 
+Apr 01 21:36:28.393 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 21:36:28.406 HYPERVISOR: exec_cmd: vm slot_add_binding R5 2 0 NM-1FE-TX 
+Apr 01 21:36:28.420 HYPERVISOR: exec_cmd: vm set_nvram R5 256 
+Apr 01 21:36:28.432 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 21:36:28.455 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 NM-1FE-TX 
+Apr 01 21:36:28.544 HYPERVISOR: exec_cmd: vm set_config R5 configs/i5_startup-config.cfg 
+Apr 01 21:36:43.648 HYPERVISOR: exec_cmd: nio create_udp udp-7455ee71-7d55-4cc9-99e2-5f5454c7a34f 10005 127.0.0.1 10004 
+Apr 01 21:36:43.680 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 0 udp-7455ee71-7d55-4cc9-99e2-5f5454c7a34f 
+Apr 01 21:36:43.704 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 21:36:44.676 HYPERVISOR: exec_cmd: nio create_udp udp-760d76ac-c0e3-4924-83b4-6380e67c7978 10012 127.0.0.1 10013 
+Apr 01 21:36:44.693 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 3 0 udp-760d76ac-c0e3-4924-83b4-6380e67c7978 
+Apr 01 21:36:44.721 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 21:36:45.206 HYPERVISOR: exec_cmd: nio create_udp udp-78004108-1d7d-488e-b32d-51e943fea072 10018 127.0.0.1 10019 
+Apr 01 21:36:45.271 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 2 0 udp-78004108-1d7d-488e-b32d-51e943fea072 
+Apr 01 21:36:45.284 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 21:40:21.809 HYPERVISOR: exec_cmd: vm set_ghost_status R5 2 
+Apr 01 21:40:22.162 HYPERVISOR: exec_cmd: vm set_ghost_file R5 c3640-a3js-mz.124-23.image-128.ghost 
+Apr 01 21:40:22.348 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 21:40:22.480 HYPERVISOR: exec_cmd: vm start R5 
+Apr 01 22:28:24.547 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 22:28:24.640 HYPERVISOR: exec_cmd: vm stop R5 
+Apr 01 22:28:24.766 VM: VM R5 shutdown.
+Apr 01 22:28:24.807 HYPERVISOR: exec_cmd: vm extract_config R5 
+Apr 01 22:28:36.368 HYPERVISOR: exec_cmd: vm get_status R5 
+Apr 01 22:28:36.484 HYPERVISOR: exec_cmd: vm extract_config R5 
+Apr 01 22:28:36.684 HYPERVISOR: exec_cmd: vm delete R5 
+Apr 01 22:28:36.685 VM: VM R5 destroyed.
+Apr 01 22:28:36.760 HYPERVISOR: exec_cmd: hypervisor stop 
+Apr 01 22:28:37.122 HYPERVISOR: Stopped.
+Apr 01 22:28:37.122 GENERAL: reset done.

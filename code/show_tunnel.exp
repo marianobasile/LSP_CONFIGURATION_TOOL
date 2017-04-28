@@ -1,0 +1,51 @@
+#!/usr/local/bin/expect
+
+set username [lindex $argv 0]
+set password [lindex $argv 1]
+set ingressRouter [lindex $argv 2]
+spawn telnet $ingressRouter
+
+expect {
+      "telnet: can't connect to remote host ($ingressRouter): Network is unreachable" {
+      puts "\nCONNNECTION TO $ingressRouter FAILED! Exiting..\n"
+      sleep 2      
+      exit 1
+      }
+      "'^]'." {
+       send -- "\r"
+       expect "Username:"
+       send -- "$username\r"
+       expect "Password:"
+       send -- "$password\r"
+       expect "#" 
+       send -- "show mpls traffic-eng tunnels\r"
+       expect {
+        -ex "--More--" {
+            send -- "\r"
+            set end 0
+            while {$end == 0} {
+             expect {
+              -ex "--More--" {
+               set buttonPressed [gets stdin]             
+               send -- "\r"
+              }
+              "#" {
+               set end 1
+              }
+             }
+            }          
+            send -- "\r"
+            send -- "exit\r"
+            expect "#"
+            send -- "exit\r"
+            expect eof
+            exit 0
+        }
+       } 
+      }
+      timeout {
+      puts "\nCONNNECTION TO $ingressRouter FAILED! Exiting..\n"
+      sleep 2
+      exit 1
+      }
+}

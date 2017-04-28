@@ -1,0 +1,62 @@
+#!/usr/local/bin/expect
+
+set username [lindex $argv 0]
+set password [lindex $argv 1]
+set ingressRouter [lindex $argv 2]
+set engressRouter [lindex $argv 3]
+set requiredBand [lindex $argv 4]
+set path [lindex $argv 5]
+set tunnelName [lindex $argv 6]
+set pathName [lindex $argv 7]
+set lsp [split $path "/"]
+spawn telnet $ingressRouter
+
+expect {
+      "telnet: can't connect to remote host ($ingressRouter): Network is unreachable" {
+      puts "\nCONNNECTION TO $ingressRouter FAILED! Exiting..\n"
+      sleep 2      
+      exit 1
+      }
+      "'^]'." {
+       send -- "\r"
+       expect "Username:"
+       send -- "$username\r"
+       expect "Password:"
+       send -- "$password\r"
+       expect "#" 
+       send -- "conf t\r"
+       expect "#"
+       send -- "interface $tunnelName\r"
+       expect "#"
+       send -- "ip unnumbered loopback0\r"
+       expect "#"
+       send -- "tunnel destination $engressRouter\r"
+       expect "#"
+       send -- "tunnel mode mpls traffic-eng\r"
+       expect "#"
+       send -- "tunnel mpls traffic-eng autoroute announce\r"
+       expect "#"
+       send -- "tunnel mpls traffic-eng bandwidth $requiredBand\r"
+       expect "#"
+       send -- "tunnel mpls traffic-eng path-option 1 explicit name $pathName\r"
+       expect "#"
+       send -- "exit\r"
+       expect "#"
+       send -- "ip explicit-path name $pathName enable\r"
+       expect "#"
+       foreach ip_addr $lsp {
+        send -- "next-address $ip_addr\r"
+        expect "#"
+       }
+       send -- "exit\r"
+       expect "#"
+       send -- "exit\r"
+       expect eof
+       exit 0
+      }
+      timeout {
+      puts "\nCONNNECTION TO $ingressRouter FAILED! Exiting..\n"
+      sleep 2
+      exit 1
+      }
+}

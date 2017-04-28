@@ -1,0 +1,50 @@
+Mar 10 23:58:08.650 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Mar 10 23:58:08.650 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 53561.
+Mar 10 23:58:08.809 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 10 23:58:08.815 HYPERVISOR: exec_cmd: hypervisor working_dir /media/user/4965959D09434F00/mpls_network/project-files/dynamips 
+Mar 10 23:58:08.815 GENERAL: working_dir=/media/user/4965959D09434F00/mpls_network/project-files/dynamips
+Mar 10 23:58:08.821 HYPERVISOR: exec_cmd: vm create R6 6 c3600 
+Mar 10 23:58:08.822 VM: VM R6 created.
+Mar 10 23:58:08.824 HYPERVISOR: exec_cmd: vm set_con_tcp_port R6 5005 
+Mar 10 23:58:08.829 HYPERVISOR: exec_cmd: c3600 get_mac_addr R6 
+Mar 10 23:58:08.853 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 10 23:58:08.861 HYPERVISOR: exec_cmd: vm slot_add_binding R6 1 0 NM-1FE-TX 
+Mar 10 23:58:08.864 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 10 23:58:08.867 HYPERVISOR: exec_cmd: vm slot_add_binding R6 3 0 NM-1FE-TX 
+Mar 10 23:58:08.870 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 10 23:58:08.873 HYPERVISOR: exec_cmd: vm set_idle_pc R6 0x605b90e0 
+Mar 10 23:58:08.876 HYPERVISOR: exec_cmd: vm set_ios R6 /home/user/GNS3/images/IOS/c3640-a3js-mz.124-23.image 
+Mar 10 23:58:08.879 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 10 23:58:08.882 HYPERVISOR: exec_cmd: vm slot_add_binding R6 2 0 NM-1FE-TX 
+Mar 10 23:58:08.885 HYPERVISOR: exec_cmd: vm set_nvram R6 256 
+Mar 10 23:58:08.889 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 10 23:58:08.892 HYPERVISOR: exec_cmd: vm slot_add_binding R6 0 0 NM-1FE-TX 
+Mar 10 23:58:08.895 HYPERVISOR: exec_cmd: c3600 set_mac_addr R6 cc06.17e3.0000 
+Mar 10 23:58:08.903 HYPERVISOR: exec_cmd: vm set_config R6 configs/i6_startup-config.cfg 
+Mar 10 23:58:10.554 HYPERVISOR: exec_cmd: nio create_udp udp-2584393d-9ab4-472f-96dd-fd65481a76e9 10015 127.0.0.1 10014 
+Mar 10 23:58:10.570 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 2 0 udp-2584393d-9ab4-472f-96dd-fd65481a76e9 
+Mar 10 23:58:10.584 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 10 23:58:10.636 HYPERVISOR: exec_cmd: nio create_udp udp-48d0258e-059a-4c67-a992-eaa12fc089f6 10017 127.0.0.1 10016 
+Mar 10 23:58:10.667 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 0 0 udp-48d0258e-059a-4c67-a992-eaa12fc089f6 
+Mar 10 23:58:10.672 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 10 23:58:10.702 HYPERVISOR: exec_cmd: nio create_udp udp-72539a97-af7f-479a-bc31-d2f10ba29235 10018 127.0.0.1 10019 
+Mar 10 23:58:10.734 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 3 0 udp-72539a97-af7f-479a-bc31-d2f10ba29235 
+Mar 10 23:58:10.747 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 10 23:58:10.770 HYPERVISOR: exec_cmd: nio create_udp udp-e41c3b9e-44d4-4a27-ab2d-153546f4aa8d 10023 127.0.0.1 10022 
+Mar 10 23:58:10.789 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 1 0 udp-e41c3b9e-44d4-4a27-ab2d-153546f4aa8d 
+Mar 10 23:58:10.813 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 11 00:00:00.370 HYPERVISOR: exec_cmd: vm set_ghost_status R6 2 
+Mar 11 00:00:00.374 HYPERVISOR: exec_cmd: vm set_ghost_file R6 c3640-a3js-mz.124-23.image-128.ghost 
+Mar 11 00:00:00.376 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 11 00:00:00.378 HYPERVISOR: exec_cmd: vm start R6 
+Mar 11 00:01:57.828 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 11 00:01:59.316 HYPERVISOR: exec_cmd: vm stop R6 
+Mar 11 00:02:00.583 VM: VM R6 shutdown.
+Mar 11 00:02:00.663 HYPERVISOR: exec_cmd: vm extract_config R6 
+Mar 11 00:02:23.611 HYPERVISOR: exec_cmd: vm get_status R6 
+Mar 11 00:02:23.636 HYPERVISOR: exec_cmd: vm extract_config R6 
+Mar 11 00:02:23.661 HYPERVISOR: exec_cmd: vm delete R6 
+Mar 11 00:02:23.661 VM: VM R6 destroyed.
+Mar 11 00:02:23.674 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 11 00:02:24.090 HYPERVISOR: Stopped.
+Mar 11 00:02:24.091 GENERAL: reset done.
