@@ -1,3 +1,5 @@
+LSP_CONFIGURATION_TOOL:
+
 LSPCconfigurationTool è un tool per la configurazione di LSP MPLS-TE. 
 Data una rete emulata usando GNS3, il nodo su cui il tool è in esecuzione raccoglie 
 le informazioni relative alla topologia della rete utilizzando l’implementazione di OSPF 
