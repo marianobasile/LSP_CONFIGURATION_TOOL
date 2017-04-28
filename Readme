@@ -2,7 +2,7 @@ LSPCconfigurationTool è un tool per la configurazione di LSP MPLS-TE.
 Data una rete emulata usando GNS3, il nodo su cui il tool è in esecuzione raccoglie 
 le informazioni relative alla topologia della rete utilizzando l’implementazione di OSPF 
 realizzata dalla libreria Quagga. Le capacità residue disponibili sui link sono invece ottenute 
-mediante l'utilizzo del protocollo "snmp". Il tool espone una interfaccia mediante la quale è specificato 
-un insieme di coppie ingress/egress tra cui stabilire un LSP MPLS-TE, con relativo requisito di capacità. 
+mediante l'utilizzo del protocollo "snmp". Il tool espone una interfaccia mediante la quale è specificato un insieme 
+di coppie ingress/egress tra cui stabilire un LSP MPLS-TE, con relativo requisito di capacità. 
 Il tool calcola in maniera combinata i percorsi ammissibili per ciascun LSP e ne effettua il setup 
 eseguendo gli appositi comandi sul router ingress.
